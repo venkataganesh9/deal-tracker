@@ -1,0 +1,32 @@
+<!-- frontend/public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deal Tracker - Real-time Discounts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔥 Deal Tracker</h1>
+        <p>Real-time discounts from top retailers</p>
+    </header>
+    
+    <div class="container">
+        <div class="deal-grid" id="dealGrid">
+            <div class="loading">Loading deals...</div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Deals update every 4 hours • Prices may change • <a href="#" id="refreshLink">Refresh now</a></p>
+        <p class="disclosure">As an Amazon Associate I earn from qualifying purchases. Product availability and prices are subject to change.</p>
+    </footer>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

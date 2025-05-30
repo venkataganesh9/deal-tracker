@@ -1,0 +1,16 @@
+# .gitignore content
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Firebase
+.scrapy/
+firebase-debug.log
+
+# Secrets
+serviceAccountKey.json
+.env
