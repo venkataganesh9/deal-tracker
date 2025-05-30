@@ -14,3 +14,4 @@ firebase-debug.log
 # Secrets
 serviceAccountKey.json
 .env
+scraper/serviceAccountKey.json
