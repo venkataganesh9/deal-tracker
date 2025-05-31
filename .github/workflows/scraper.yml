@@ -37,7 +37,6 @@ jobs:
           FIREBASE_CLIENT_CERT_URL: ${{ secrets.FIREBASE_CLIENT_CERT_URL }}
           AMAZON_ASSOCIATE_TAG: ${{ secrets.AMAZON_ASSOCIATE_TAG }}
         run: |
-          # Write service account if provided
           if [ -n "$FIREBASE_SERVICE_ACCOUNT" ]; then
             echo "$FIREBASE_SERVICE_ACCOUNT" > serviceAccountKey.json
           fi
@@ -54,4 +53,8 @@ jobs:
       - name: Deploy to Firebase
         working-directory: ./frontend
         run: |
-          firebase deploy --only hosting --token ${{ secrets.FIREBASE_TOKEN }} --non-interactive
+          # Set project explicitly in the deploy command
+          firebase deploy --only hosting \
+            --project ${{ secrets.FIREBASE_PROJECT_ID }} \
+            --token ${{ secrets.FIREBASE_TOKEN }} \
+            --non-interactive
