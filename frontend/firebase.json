@@ -1,4 +1,3 @@
-// frontend/firebase.json
 {
   "hosting": {
     "public": "public",
