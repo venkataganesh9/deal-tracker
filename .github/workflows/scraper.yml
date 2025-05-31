@@ -50,21 +50,5 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
         
-      - name: Configure Firebase Project
-        run: |
-          # Navigate to frontend directory
-          cd frontend
-          
-          # Add project ID to firebase.json
-          sed -i 's/"public": "public",/"site": "'"${{ secrets.FIREBASE_PROJECT_ID )}"'",\n    "public": "public",/' firebase.json
-          
-          # Verify configuration
-          echo "Firebase configuration:"
-          cat firebase.json
-          
       - name: Deploy to Firebase
-        run: |
-          cd frontend
-          firebase deploy --only hosting \
-            --token ${{ secrets.FIREBASE_TOKEN }} \
-            --non-interactive
+        run: cd frontend && firebase deploy --only hosting --project ${{ secrets.FIREBASE_PROJECT_ID }} --token ${{ secrets.FIREBASE_TOKEN }} --non-interactive
