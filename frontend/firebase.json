@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "dealtracker-64cb1",  // ADD THIS LINE
     "public": "public",
     "ignore": [
       "firebase.json",
