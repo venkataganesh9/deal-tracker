@@ -1,12 +1,14 @@
 // frontend/public/script.js
 // Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyANOSS11I-0_NRlUQG4VnUt7amBCeqkBkU",
+  authDomain: "dealtracker-64cb1.firebaseapp.com",
+  projectId: "dealtracker-64cb1",
+  storageBucket: "dealtracker-64cb1.firebasestorage.app",
+  messagingSenderId: "124984341678",
+  appId: "1:124984341678:web:dc88327df62555ee02e93f",
+  measurementId: "G-HDPC7EYCKZ"
 };
 
 // Initialize Firebase
